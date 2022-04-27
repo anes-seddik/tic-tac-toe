@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addPlayerNamesActivity"
+    android:background="@color/dark_blue"
+    android:clickable="true"
+    android:focusableInTouchMode="true" >
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/player1Layout"
+        android:layout_marginTop="170dp"
+        android:text="Enter Player names"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:id="@+id/player1Layout"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Title"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/shape"
+
+        >
+        <ImageView
+            android:id="@+id/player_x"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:srcCompat = "@drawable/nox_x"
+            android:transitionName="transition_x"
+            android:layout_gravity="left"
+            app:tint="@color/white"
+            android:padding="7dp"
+            />
+
+        <EditText
+            android:id="@+id/edittxt1"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/shape"
+            android:hint="player 1"
+            android:maxLength="7"
+            android:maxLines="1"
+            android:singleLine="true"
+
+
+            android:paddingStart="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:transitionName="player1name" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/player2Layout"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player1Layout"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape"
+
+        >
+        <ImageView
+            android:id="@+id/player_o"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:srcCompat = "@drawable/nox_o"
+            android:transitionName="transition_o"
+            android:layout_gravity="left"
+            app:tint="@color/white"
+            android:padding="7dp"
+            />
+        <EditText
+            android:id="@+id/edittxt2"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/shape"
+            android:textColor="@color/white"
+            android:hint="player 2"
+            android:textColorHint="@color/white"
+            android:maxLength="7"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:paddingStart="10dp"
+            android:transitionName="player2name"
+            />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_constraintTop_toBottomOf="@+id/player2Layout"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/shape_clicked"
+        android:backgroundTint="@color/white"
+        android:textSize="30sp"
+        android:id="@+id/playAgainbtn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="START PLAYING"
+        android:maxLines="1"
+        android:textColor="@color/bg_blue"
+        android:textStyle="bold"
+        android:onClick="startGame"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
